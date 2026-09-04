@@ -1,5 +1,11 @@
 // 26.2	-999999999-01-01T00:00:00	more-materials/MoreMaterials Recipes
 06bda9677e39dcc37a30b3a48e5193f327c91f36 data/more-materials/advancement/recipes/building_blocks/block_of_tin.json
 64bdd77e09226fc835deb475f7d12347ab033856 data/more-materials/advancement/recipes/misc/tin_ingot.json
+e5430d35e5f31906caf84dd5695734354c147a0a data/more-materials/advancement/recipes/misc/tin_ingot_from_blasting_tin_ore.json
+7dfe0552d69079a182cfa36669f1b5c541bffadc data/more-materials/advancement/recipes/misc/tin_ingot_from_smelting_tin_ore.json
+734beb3a1309e4909b55469a46e43b77b3fb6449 data/more-materials/advancement/recipes/misc/tin_ingots_from_block.json
 95c2614a31af62badfa09d560ec50e1f1ee9ae1b data/more-materials/recipe/block_of_tin.json
 6aaef7caa0a7bc968dddf16432f3719059b69f3c data/more-materials/recipe/tin_ingot.json
+8ef756f0a4b6b3c02efe1430e203f1009f90e989 data/more-materials/recipe/tin_ingot_from_blasting_tin_ore.json
+ddc364aaee1c8eca6ec9a74b3bdb4d38a1aba0e5 data/more-materials/recipe/tin_ingot_from_smelting_tin_ore.json
+6aaef7caa0a7bc968dddf16432f3719059b69f3c data/more-materials/recipe/tin_ingots_from_block.json

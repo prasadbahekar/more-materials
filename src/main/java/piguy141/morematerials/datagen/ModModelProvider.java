@@ -16,6 +16,7 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateBlockStateModels(BlockModelGenerators blockModelGenerators) {
         blockModelGenerators.createTrivialCube(ModBlocks.BLOCK_OF_TIN);
+        blockModelGenerators.createTrivialCube(ModBlocks.TIN_ORE);
     }
 
     @Override

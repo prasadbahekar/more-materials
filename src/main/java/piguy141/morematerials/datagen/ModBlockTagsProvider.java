@@ -16,9 +16,11 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider registries) {
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
-                .add(ModBlocks.keyOf(ModBlocks.BLOCK_OF_TIN));
+                .add(ModBlocks.keyOf(ModBlocks.BLOCK_OF_TIN))
+                .add(ModBlocks.keyOf(ModBlocks.TIN_ORE));
 
         builder(BlockTags.NEEDS_STONE_TOOL)
-                .add(ModBlocks.keyOf(ModBlocks.BLOCK_OF_TIN));
+                .add(ModBlocks.keyOf(ModBlocks.BLOCK_OF_TIN))
+                .add(ModBlocks.keyOf(ModBlocks.TIN_ORE));
     }
 }

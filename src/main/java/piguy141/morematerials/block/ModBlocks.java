@@ -19,6 +19,7 @@ import java.util.function.Function;
 public class ModBlocks {
     public static void initialize () {
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.BUILDING_BLOCKS).register((creativeTab) -> creativeTab.accept(BLOCK_OF_TIN));
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.NATURAL_BLOCKS).register((creativeTab) -> creativeTab.accept(TIN_ORE));
     }
 
     public static ResourceKey<Block> keyOf(Block block) {
@@ -39,4 +40,5 @@ public class ModBlocks {
     }
 
     public static Block BLOCK_OF_TIN = registerBlock("block_of_tin", properties -> new Block(properties.strength(4f).requiresCorrectToolForDrops().sound(SoundType.IRON)));
+    public static Block TIN_ORE = registerBlock("tin_ore", properties -> new Block(properties.strength(4f).requiresCorrectToolForDrops().sound(SoundType.IRON)));
 }
