@@ -1,13 +1,14 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": "more-materials:tin_ingot"
+  },
   "pattern": [
     "###",
     "###",
     "###"
   ],
-  "key": {
-    "#": "more-materials:tin-ingot"
-  },
   "result": {
     "id": "more-materials:block_of_tin"
   }

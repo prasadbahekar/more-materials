@@ -1,0 +1,3 @@
+// 26.2	-999999999-01-01T00:00:00	more-materials/Tags for minecraft:block
+f5d58c795d4bb784c2c047eb94e09cf414d9dada data/minecraft/tags/block/mineable/pickaxe.json
+f5d58c795d4bb784c2c047eb94e09cf414d9dada data/minecraft/tags/block/needs_stone_tool.json

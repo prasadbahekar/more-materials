@@ -1,0 +1,6 @@
+// 26.2	-999999999-01-01T00:00:00	more-materials/Model Definitions
+c2ab2303c18bb1be363f9083b3e53bd42da79a75 assets/more-materials/blockstates/block_of_tin.json
+b81af765519905f42d27b2b45ed0ecdf8763b62b assets/more-materials/items/block_of_tin.json
+0f5445034af160e0d41bb0ac94ad44f848f65973 assets/more-materials/items/tin_ingot.json
+ef9b57a65136ce475048fd1289d4e39ec8f627c0 assets/more-materials/models/block/block_of_tin.json
+2899b1a3dd4a643f4ac68aecc1e8c12205df69af assets/more-materials/models/item/tin_ingot.json

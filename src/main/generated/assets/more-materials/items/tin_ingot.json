@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "more-materials:item/tin-ingot"
+    "model": "more-materials:item/tin_ingot"
   }
 }

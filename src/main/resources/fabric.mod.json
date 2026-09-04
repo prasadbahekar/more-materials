@@ -12,6 +12,9 @@
   "entrypoints": {
     "main": [
       "piguy141.morematerials.Main"
+    ],
+    "fabric-datagen": [
+      "piguy141.morematerials.MainDataGenerator"
     ]
   },
   "mixins": [
