@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": "more-materials:tin-ingot"
+  },
+  "result": {
+    "id": "more-materials:block_of_tin"
+  }
+}
