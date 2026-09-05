@@ -16,6 +16,8 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider registries) {
+        this.tag(BlockTags.INCORRECT_FOR_STONE_TOOL);
+
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.keyOf(ModBlocks.BLOCK_OF_TIN))
                 .add(ModBlocks.keyOf(ModBlocks.TIN_ORE));
@@ -24,6 +26,7 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
                 .add(ModBlocks.keyOf(ModBlocks.BLOCK_OF_TIN))
                 .add(ModBlocks.keyOf(ModBlocks.TIN_ORE));
 
-        tag(ModTags.Blocks.INCORRECT_FOR_TIN_TOOL).addOptionalTag(BlockTags.INCORRECT_FOR_IRON_TOOL);
+        tag(ModTags.Blocks.INCORRECT_FOR_TIN_TOOL)
+                .addTag(BlockTags.INCORRECT_FOR_STONE_TOOL);
     }
 }

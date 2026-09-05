@@ -1,7 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
-  "group": "tin",
   "key": {
     "S": "minecraft:stick",
     "T": "more-materials:tin_ingot"

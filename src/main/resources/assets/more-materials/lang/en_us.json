@@ -1,6 +1,11 @@
 {
   "item.more-materials.tin_ingot": "Tin Ingot",
   "item.more-materials.tin_sword": "Tin Sword",
+  "item.more-materials.tin_pickaxe": "Tin Pickaxe",
+  "item.more-materials.tin_axe": "Tin Axe",
+  "item.more-materials.tin_shovel": "Tin Shovel",
+  "item.more-materials.tin_hoe": "Tin Hoe",
+
   "block.more-materials.block_of_tin": "Block of Tin",
-  "block.more-materials.tin_ore": "Tin Ore",
+  "block.more-materials.tin_ore": "Tin Ore"
 }

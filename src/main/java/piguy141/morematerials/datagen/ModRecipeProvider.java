@@ -44,7 +44,43 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .define('T', ModItems.TIN_INGOT)
                         .define('S', Items.STICK)
                         .unlockedBy(getHasName(ModItems.TIN_INGOT), has(ModItems.TIN_INGOT))
-                        .group("tin").save(output, "tin_sword");
+                        .save(output);
+
+                shaped(RecipeCategory.TOOLS, ModItems.TIN_PICKAXE)
+                        .pattern("TTT")
+                        .pattern(" S ")
+                        .pattern(" S ")
+                        .define('T', ModItems.TIN_INGOT)
+                        .define('S', Items.STICK)
+                        .unlockedBy(getHasName(ModItems.TIN_INGOT), has(ModItems.TIN_INGOT))
+                        .save(output);
+
+                shaped(RecipeCategory.COMBAT, ModItems.TIN_AXE)
+                        .pattern("TT")
+                        .pattern("ST")
+                        .pattern("S ")
+                        .define('T', ModItems.TIN_INGOT)
+                        .define('S', Items.STICK)
+                        .unlockedBy(getHasName(ModItems.TIN_INGOT), has(ModItems.TIN_INGOT))
+                        .save(output);
+
+                shaped(RecipeCategory.TOOLS, ModItems.TIN_SHOVEL)
+                        .pattern("T")
+                        .pattern("S")
+                        .pattern("S")
+                        .define('T', ModItems.TIN_INGOT)
+                        .define('S', Items.STICK)
+                        .unlockedBy(getHasName(ModItems.TIN_INGOT), has(ModItems.TIN_INGOT))
+                        .save(output);
+
+                shaped(RecipeCategory.TOOLS, ModItems.TIN_HOE)
+                        .pattern("TT")
+                        .pattern("S ")
+                        .pattern("S ")
+                        .define('T', ModItems.TIN_INGOT)
+                        .define('S', Items.STICK)
+                        .unlockedBy(getHasName(ModItems.TIN_INGOT), has(ModItems.TIN_INGOT))
+                        .save(output);
             }
         };
     }

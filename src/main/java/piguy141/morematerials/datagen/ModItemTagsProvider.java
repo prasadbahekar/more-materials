@@ -17,5 +17,9 @@ public class ModItemTagsProvider extends FabricTagsProvider.ItemTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider registries) {
         builder(ItemTags.SWORDS).add(ModItems.keyOf(ModItems.TIN_SWORD));
+        builder(ItemTags.PICKAXES).add(ModItems.keyOf(ModItems.TIN_PICKAXE));
+        builder(ItemTags.AXES).add(ModItems.keyOf(ModItems.TIN_AXE));
+        builder(ItemTags.SHOVELS).add(ModItems.keyOf(ModItems.TIN_SHOVEL));
+        builder(ItemTags.HOES).add(ModItems.keyOf(ModItems.TIN_HOE));
     }
 }
