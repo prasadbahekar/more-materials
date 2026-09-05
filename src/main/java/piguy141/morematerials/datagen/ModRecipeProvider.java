@@ -8,6 +8,7 @@ import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.CookingBookCategory;
 import net.minecraft.world.level.ItemLike;
 import piguy141.morematerials.block.ModBlocks;
@@ -35,6 +36,15 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .requires(ModBlocks.BLOCK_OF_TIN)
                         .unlockedBy("has_block_of_tin", has(ModBlocks.BLOCK_OF_TIN))
                         .save(output, "tin_ingots_from_block");
+
+                shaped(RecipeCategory.COMBAT, ModItems.TIN_SWORD)
+                        .pattern("T")
+                        .pattern("T")
+                        .pattern("S")
+                        .define('T', ModItems.TIN_INGOT)
+                        .define('S', Items.STICK)
+                        .unlockedBy(getHasName(ModItems.TIN_INGOT), has(ModItems.TIN_INGOT))
+                        .group("tin").save(output, "tin_sword");
             }
         };
     }

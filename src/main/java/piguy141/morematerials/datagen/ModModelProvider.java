@@ -22,5 +22,6 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateItemModels(ItemModelGenerators itemModelGenerators) {
         itemModelGenerators.generateFlatItem(ModItems.TIN_INGOT, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.TIN_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
     }
 }

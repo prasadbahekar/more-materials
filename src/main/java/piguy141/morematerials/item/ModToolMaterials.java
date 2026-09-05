@@ -6,7 +6,7 @@ import piguy141.morematerials.tags.ModTags;
 public class ModToolMaterials {
     public static final ToolMaterial TIN = new ToolMaterial(
             ModTags.Blocks.INCORRECT_FOR_TIN_TOOL,
-            180,
+            150,
             5f,
             1f,
             12,
