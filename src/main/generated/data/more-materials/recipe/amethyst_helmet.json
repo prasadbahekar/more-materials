@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "T": "more-materials:amethyst_gem"
+  },
+  "pattern": [
+    "TTT",
+    "T T"
+  ],
+  "result": {
+    "id": "more-materials:amethyst_helmet"
+  }
+}

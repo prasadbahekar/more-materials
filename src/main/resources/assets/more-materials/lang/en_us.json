@@ -5,12 +5,25 @@
   "item.more-materials.tin_axe": "Tin Axe",
   "item.more-materials.tin_shovel": "Tin Shovel",
   "item.more-materials.tin_hoe": "Tin Hoe",
-
-  "item.more-materials.tin_helmet": "Tin Hoe",
+  "item.more-materials.tin_helmet": "Tin Helmet",
   "item.more-materials.tin_chestplate": "Tin Chestplate",
   "item.more-materials.tin_leggings": "Tin Leggings",
   "item.more-materials.tin_boots": "Tin Boots",
 
+  "item.more-materials.amethyst_gem": "Amethyst Gem",
+  "item.more-materials.amethyst_sword": "Amethyst Sword",
+  "item.more-materials.amethyst_pickaxe": "Amethyst Pickaxe",
+  "item.more-materials.amethyst_axe": "Amethyst Axe",
+  "item.more-materials.amethyst_shovel": "Amethyst Shovel",
+  "item.more-materials.amethyst_hoe": "Amethyst Hoe",
+  "item.more-materials.amethyst_helmet": "Amethyst Helmet",
+  "item.more-materials.amethyst_chestplate": "Amethyst Chestplate",
+  "item.more-materials.amethyst_leggings": "Amethyst Leggings",
+  "item.more-materials.amethyst_boots": "Amethyst Boots",
+
   "block.more-materials.block_of_tin": "Block of Tin",
-  "block.more-materials.tin_ore": "Tin Ore"
+  "block.more-materials.tin_ore": "Tin Ore",
+
+  "block.more-materials.block_of_amethyst": "Block of Amethyst",
+  "block.more-materials.amethyst_ore": "Amethyst Ore"
 }

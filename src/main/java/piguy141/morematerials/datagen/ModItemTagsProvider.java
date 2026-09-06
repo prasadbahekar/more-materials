@@ -26,5 +26,11 @@ public class ModItemTagsProvider extends FabricTagsProvider.ItemTagsProvider {
         builder(ItemTags.CHEST_ARMOR).add(ModItems.keyOf(ModItems.TIN_CHESTPLATE));
         builder(ItemTags.LEG_ARMOR).add(ModItems.keyOf(ModItems.TIN_LEGGINGS));
         builder(ItemTags.FOOT_ARMOR).add(ModItems.keyOf(ModItems.TIN_BOOTS));
+
+        builder(ItemTags.SWORDS).add(ModItems.keyOf(ModItems.AMETHYST_SWORD));
+        builder(ItemTags.PICKAXES).add(ModItems.keyOf(ModItems.AMETHYST_PICKAXE));
+        builder(ItemTags.AXES).add(ModItems.keyOf(ModItems.AMETHYST_AXE));
+        builder(ItemTags.SHOVELS).add(ModItems.keyOf(ModItems.AMETHYST_SHOVEL));
+        builder(ItemTags.HOES).add(ModItems.keyOf(ModItems.AMETHYST_HOE));
     }
 }

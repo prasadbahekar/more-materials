@@ -7,10 +7,15 @@ import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraft.world.level.levelgen.placement.*;
 
 public class ModBiomeModifications {
-//    public static void configure (BootstrapContext<PlacedFeature> context) {
-//        BiomeModifications.addFeature(
-//                BiomeSelectors.foundInOverworld(),
-//                GenerationStep.Decoration.UNDERGROUND_ORES,
-//                ModPlacedFeatures.TIN_ORE_PLACED);
-//    }
+    public static void initialize () {
+        BiomeModifications.addFeature(
+                BiomeSelectors.foundInOverworld(),
+                GenerationStep.Decoration.UNDERGROUND_ORES,
+                ModPlacedFeatures.TIN_ORE_PLACED);
+
+        BiomeModifications.addFeature(
+                BiomeSelectors.foundInOverworld(),
+                GenerationStep.Decoration.UNDERGROUND_ORES,
+                ModPlacedFeatures.AMETHYST_ORE_PLACED);
+    }
 }

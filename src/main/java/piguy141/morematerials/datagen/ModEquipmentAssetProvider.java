@@ -24,6 +24,7 @@ public class ModEquipmentAssetProvider implements DataProvider {
 
     private static void bootstrap (BiConsumer<ResourceKey<EquipmentAsset>, EquipmentClientInfo> consumer) {
         consumer.accept(ModArmorMaterials.TIN_KEY, EquipmentClientInfo.builder().addHumanoidLayers(Identifier.fromNamespaceAndPath(Main.MOD_ID, "tin")).build());
+        consumer.accept(ModArmorMaterials.AMETHYST_KEY, EquipmentClientInfo.builder().addHumanoidLayers(Identifier.fromNamespaceAndPath(Main.MOD_ID, "amethyst")).build());
     }
 
     @Override

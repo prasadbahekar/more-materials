@@ -1,3 +1,5 @@
 // 26.2	-999999999-01-01T00:00:00	more-materials/Block Loot Tables
+cbc0737c72d95f6a8e4a1d5c4138ba21d6cbf909 data/more-materials/loot_table/blocks/amethyst_ore.json
+92c98ef012a70edee7650ef34c8168b2e6c8814b data/more-materials/loot_table/blocks/block_of_amethyst.json
 08b24dc557a6298caccb642078421991b9986c1e data/more-materials/loot_table/blocks/block_of_tin.json
 e4c26bf1937d5fadb2082fb0f02fe35d652e4e32 data/more-materials/loot_table/blocks/tin_ore.json

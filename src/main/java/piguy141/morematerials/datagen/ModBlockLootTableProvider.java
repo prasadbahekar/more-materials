@@ -27,8 +27,10 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
     @Override
     public void generate() {
         dropSelf(ModBlocks.BLOCK_OF_TIN);
+        dropSelf(ModBlocks.BLOCK_OF_AMETHYST);
 
         add(ModBlocks.TIN_ORE, createMultipleOreDrops(ModBlocks.TIN_ORE, ModBlocks.TIN_ORE.asItem(), 1, 1));
+        add(ModBlocks.AMETHYST_ORE, createMultipleOreDrops(ModBlocks.AMETHYST_ORE, ModItems.AMETHYST_GEM, 1, 1));
     }
 
     public LootTable.Builder createMultipleOreDrops(final Block block, Item item, float minDrops, float maxDrops) {

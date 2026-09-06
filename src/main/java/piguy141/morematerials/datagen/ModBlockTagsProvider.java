@@ -17,16 +17,26 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider registries) {
         this.tag(BlockTags.INCORRECT_FOR_STONE_TOOL);
+        this.tag(BlockTags.INCORRECT_FOR_DIAMOND_TOOL);
 
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.keyOf(ModBlocks.BLOCK_OF_TIN))
-                .add(ModBlocks.keyOf(ModBlocks.TIN_ORE));
+                .add(ModBlocks.keyOf(ModBlocks.TIN_ORE))
+                .add(ModBlocks.keyOf(ModBlocks.BLOCK_OF_AMETHYST))
+                .add(ModBlocks.keyOf(ModBlocks.AMETHYST_ORE));
 
         tag(BlockTags.NEEDS_STONE_TOOL)
                 .add(ModBlocks.keyOf(ModBlocks.BLOCK_OF_TIN))
                 .add(ModBlocks.keyOf(ModBlocks.TIN_ORE));
 
+        tag(BlockTags.NEEDS_DIAMOND_TOOL)
+                .add(ModBlocks.keyOf(ModBlocks.BLOCK_OF_AMETHYST))
+                .add(ModBlocks.keyOf(ModBlocks.AMETHYST_ORE));
+
         tag(ModTags.Blocks.INCORRECT_FOR_TIN_TOOL)
                 .addTag(BlockTags.INCORRECT_FOR_STONE_TOOL);
+
+        tag(ModTags.Blocks.INCORRECT_FOR_AMETHYST_TOOL)
+                .addTag(BlockTags.INCORRECT_FOR_DIAMOND_TOOL);
     }
 }

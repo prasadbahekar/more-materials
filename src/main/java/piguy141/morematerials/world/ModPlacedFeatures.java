@@ -23,7 +23,15 @@ public class ModPlacedFeatures {
                 HeightRangePlacement.uniform(VerticalAnchor.absolute(-16), VerticalAnchor.absolute(64))
         );
 
+        List<PlacementModifier> amethystOreModifiers = List.of(
+                CountPlacement.of(4),
+                BiomeFilter.biome(),
+                InSquarePlacement.spread(),
+                HeightRangePlacement.triangle(VerticalAnchor.absolute(-48), VerticalAnchor.absolute(0))
+        );
+
         context.register(TIN_ORE_PLACED, new PlacedFeature(configuredFeatures.getOrThrow(ModConfiguredFeatures.TIN_ORE_VEIN), tinOreModifiers));
+        context.register(AMETHYST_ORE_PLACED, new PlacedFeature(configuredFeatures.getOrThrow(ModConfiguredFeatures.AMETHYST_ORE_VEIN), amethystOreModifiers));
     }
 
     public static final ResourceKey<PlacedFeature> TIN_ORE_PLACED =
@@ -31,4 +39,10 @@ public class ModPlacedFeatures {
                 Registries.PLACED_FEATURE,
                 Identifier.fromNamespaceAndPath(Main.MOD_ID, "tin_ore_placed")
         );
+
+    public static final ResourceKey<PlacedFeature> AMETHYST_ORE_PLACED =
+            ResourceKey.create(
+                    Registries.PLACED_FEATURE,
+                    Identifier.fromNamespaceAndPath(Main.MOD_ID, "amethyst_ore_placed")
+            );
 }

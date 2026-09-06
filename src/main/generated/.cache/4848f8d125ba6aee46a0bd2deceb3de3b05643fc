@@ -1,5 +1,8 @@
 // 26.2	-999999999-01-01T00:00:00	more-materials/Tags for minecraft:block
+35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/minecraft/tags/block/incorrect_for_diamond_tool.json
 35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/minecraft/tags/block/incorrect_for_stone_tool.json
-12ed4f273347fb557382c89e96ceac0639a9177c data/minecraft/tags/block/mineable/pickaxe.json
+f214e04340ac21eab17e64942f33f04cd2de9208 data/minecraft/tags/block/mineable/pickaxe.json
+b9bebe321795ba05b9d165b26ed1fba9ab5a0912 data/minecraft/tags/block/needs_diamond_tool.json
 12ed4f273347fb557382c89e96ceac0639a9177c data/minecraft/tags/block/needs_stone_tool.json
+f57a1c0d935679dbbcab3f2e8a06cae2238a6735 data/more-materials/tags/block/incorrect_for_amethyst_tool.json
 b239e7b03736ed687b12fa515c9a1139f07cc1a8 data/more-materials/tags/block/incorrect_for_tin_tool.json

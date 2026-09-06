@@ -1,3 +1,5 @@
 // 26.2	-999999999-01-01T00:00:00	more-materials/World Generation
-9621d3966cb49e18b8549965cb1ba276188e5268 data/more-materials/worldgen/configured_feature/tin_ore_vein.json
+5a805605545284a7904f8e9e24969cf466ddd008 data/more-materials/worldgen/configured_feature/amethyst_ore_vein.json
+3caf232b2209aa8888c0f538fbeb33c0f2e281a6 data/more-materials/worldgen/configured_feature/tin_ore_vein.json
+8446aae448cc588d1a974356c495a9a141316fb3 data/more-materials/worldgen/placed_feature/amethyst_ore_placed.json
 10bc1cbfc14b84151d07b3a10302b1d4cb035ee7 data/more-materials/worldgen/placed_feature/tin_ore_placed.json

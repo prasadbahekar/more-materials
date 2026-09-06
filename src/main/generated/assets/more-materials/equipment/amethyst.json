@@ -1,0 +1,19 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "more-materials:amethyst"
+      }
+    ],
+    "humanoid_baby": [
+      {
+        "texture": "more-materials:amethyst"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "more-materials:amethyst"
+      }
+    ]
+  }
+}

@@ -1,6 +1,8 @@
 {
   "values": [
     "more-materials:block_of_tin",
-    "more-materials:tin_ore"
+    "more-materials:tin_ore",
+    "more-materials:block_of_amethyst",
+    "more-materials:amethyst_ore"
   ]
 }

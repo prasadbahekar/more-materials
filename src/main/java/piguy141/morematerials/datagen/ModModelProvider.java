@@ -17,6 +17,8 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateBlockStateModels(BlockModelGenerators blockModelGenerators) {
         blockModelGenerators.createTrivialCube(ModBlocks.BLOCK_OF_TIN);
         blockModelGenerators.createTrivialCube(ModBlocks.TIN_ORE);
+        blockModelGenerators.createTrivialCube(ModBlocks.BLOCK_OF_AMETHYST);
+        blockModelGenerators.createTrivialCube(ModBlocks.AMETHYST_ORE);
     }
 
     @Override
@@ -31,5 +33,16 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerators.generateTrimmableItem(ModItems.TIN_CHESTPLATE, ModArmorMaterials.TIN_KEY, itemModelGenerators.TRIM_PREFIX_CHESTPLATE, false);
         itemModelGenerators.generateTrimmableItem(ModItems.TIN_LEGGINGS, ModArmorMaterials.TIN_KEY, itemModelGenerators.TRIM_PREFIX_LEGGINGS, false);
         itemModelGenerators.generateTrimmableItem(ModItems.TIN_BOOTS, ModArmorMaterials.TIN_KEY, itemModelGenerators.TRIM_PREFIX_BOOTS, false);
+
+        itemModelGenerators.generateFlatItem(ModItems.AMETHYST_GEM, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.AMETHYST_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.AMETHYST_PICKAXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.AMETHYST_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.AMETHYST_SHOVEL, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.AMETHYST_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateTrimmableItem(ModItems.AMETHYST_HELMET, ModArmorMaterials.TIN_KEY, itemModelGenerators.TRIM_PREFIX_HELMET, false);
+        itemModelGenerators.generateTrimmableItem(ModItems.AMETHYST_CHESTPLATE, ModArmorMaterials.TIN_KEY, itemModelGenerators.TRIM_PREFIX_CHESTPLATE, false);
+        itemModelGenerators.generateTrimmableItem(ModItems.AMETHYST_LEGGINGS, ModArmorMaterials.TIN_KEY, itemModelGenerators.TRIM_PREFIX_LEGGINGS, false);
+        itemModelGenerators.generateTrimmableItem(ModItems.AMETHYST_BOOTS, ModArmorMaterials.TIN_KEY, itemModelGenerators.TRIM_PREFIX_BOOTS, false);
     }
 }

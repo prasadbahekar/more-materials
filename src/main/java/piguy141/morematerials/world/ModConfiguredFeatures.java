@@ -19,9 +19,17 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> TIN_ORE_VEIN =
         ResourceKey.create(Registries.CONFIGURED_FEATURE, Identifier.fromNamespaceAndPath(Main.MOD_ID, "tin_ore_vein"));
 
+    public static final ResourceKey<ConfiguredFeature<?, ?>> AMETHYST_ORE_VEIN =
+            ResourceKey.create(Registries.CONFIGURED_FEATURE, Identifier.fromNamespaceAndPath(Main.MOD_ID, "amethyst_ore_vein"));
+
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
         RuleTest stoneReplaceable = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
+        RuleTest deepslateReplaceable = new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
+
         List<OreConfiguration.TargetBlockState> tinOreConfig = List.of(OreConfiguration.target(stoneReplaceable, ModBlocks.TIN_ORE.defaultBlockState()));
-        context.register(TIN_ORE_VEIN, new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(tinOreConfig, 10)));
+        List<OreConfiguration.TargetBlockState> amethystOreConfig = List.of(OreConfiguration.target(deepslateReplaceable, ModBlocks.AMETHYST_ORE.defaultBlockState()));
+
+        context.register(TIN_ORE_VEIN, new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(tinOreConfig, 8)));
+        context.register(AMETHYST_ORE_VEIN, new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(amethystOreConfig, 5)));
     }
 }

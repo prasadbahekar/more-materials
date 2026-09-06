@@ -12,4 +12,13 @@ public class ModToolMaterials {
             12,
             ModTags.Items.TIN_REPAIR
     );
+
+    public static final ToolMaterial AMETHYST = new ToolMaterial(
+            ModTags.Blocks.INCORRECT_FOR_AMETHYST_TOOL,
+            1650,
+            8.5f,
+            3f,
+            20,
+            ModTags.Items.AMETHYST_REPAIR
+    );
 }

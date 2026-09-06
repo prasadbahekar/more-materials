@@ -18,8 +18,15 @@ import java.util.function.Function;
 
 public class ModBlocks {
     public static void initialize () {
-        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.BUILDING_BLOCKS).register((creativeTab) -> creativeTab.accept(BLOCK_OF_TIN));
-        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.NATURAL_BLOCKS).register((creativeTab) -> creativeTab.accept(TIN_ORE));
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.BUILDING_BLOCKS).register((creativeTab) -> {
+            creativeTab.accept(BLOCK_OF_TIN);
+            creativeTab.accept(BLOCK_OF_AMETHYST);
+        });
+
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.NATURAL_BLOCKS).register((creativeTab) -> {
+            creativeTab.accept(TIN_ORE);
+            creativeTab.accept(AMETHYST_ORE);
+        });
     }
 
     public static ResourceKey<Block> keyOf(Block block) {
@@ -40,5 +47,7 @@ public class ModBlocks {
     }
 
     public static Block BLOCK_OF_TIN = registerBlock("block_of_tin", properties -> new Block(properties.strength(4f).requiresCorrectToolForDrops().sound(SoundType.IRON)));
-    public static Block TIN_ORE = registerBlock("tin_ore", properties -> new Block(properties.strength(4f).requiresCorrectToolForDrops().sound(SoundType.IRON)));
+    public static Block TIN_ORE = registerBlock("tin_ore", properties -> new Block(properties.strength(3f).requiresCorrectToolForDrops().sound(SoundType.IRON)));
+    public static Block BLOCK_OF_AMETHYST = registerBlock("block_of_amethyst", properties -> new Block(properties.strength(5f).requiresCorrectToolForDrops().sound(SoundType.AMETHYST)));
+    public static Block AMETHYST_ORE = registerBlock("amethyst_ore", properties -> new Block(properties.strength(4f).requiresCorrectToolForDrops().sound(SoundType.AMETHYST)));
 }

@@ -4,10 +4,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.data.recipes.RecipeCategory;
-import net.minecraft.data.recipes.RecipeOutput;
-import net.minecraft.data.recipes.RecipeProvider;
-import net.minecraft.data.recipes.ShapelessRecipeBuilder;
+import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.CookingBookCategory;
 import net.minecraft.world.level.ItemLike;
@@ -18,6 +15,7 @@ import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 public class ModRecipeProvider extends FabricRecipeProvider {
+
     public ModRecipeProvider(FabricPackOutput output, CompletableFuture<HolderLookup.Provider> registriesFuture) {
         super(output, registriesFuture);
     }
@@ -25,104 +23,158 @@ public class ModRecipeProvider extends FabricRecipeProvider {
     @Override
     protected RecipeProvider createRecipeProvider(HolderLookup.Provider registries, RecipeOutput output) {
         return new RecipeProvider(registries, output) {
+
             @Override
             public void buildRecipes() {
-                List<ItemLike> TIN_SMELTABLES = List.of(ModBlocks.TIN_ORE);
-                oreSmelting(TIN_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.BLOCKS, ModItems.TIN_INGOT, 0.25f, 200, "tin");
-                oreBlasting(TIN_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.BLOCKS, ModItems.TIN_INGOT, 0.25f, 200, "tin");
-
+                // Tin
+                List<ItemLike> tinSmeltables = List.of(ModBlocks.TIN_ORE);
+                oreSmelting(tinSmeltables, RecipeCategory.MISC, CookingBookCategory.BLOCKS, ModItems.TIN_INGOT, 0.25f, 200, "tin");
+                oreBlasting(tinSmeltables, RecipeCategory.MISC, CookingBookCategory.BLOCKS, ModItems.TIN_INGOT, 0.25f, 200, "tin");
                 nineBlockStorageRecipes(RecipeCategory.MISC, ModItems.TIN_INGOT, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLOCK_OF_TIN);
                 ShapelessRecipeBuilder.shapeless(registries.lookupOrThrow(Registries.ITEM), RecipeCategory.MISC, ModItems.TIN_INGOT, 9)
                         .requires(ModBlocks.BLOCK_OF_TIN)
-                        .unlockedBy("has_block_of_tin", has(ModBlocks.BLOCK_OF_TIN))
+                        .unlockedBy(getHasName(ModBlocks.BLOCK_OF_TIN), has(ModBlocks.BLOCK_OF_TIN))
                         .save(output, "tin_ingots_from_block");
 
-                // Tin Sword
-                shaped(RecipeCategory.COMBAT, ModItems.TIN_SWORD)
+                addMaterialRecipes(new MaterialSet(
+                        ModItems.TIN_INGOT,
+                        ModItems.TIN_SWORD,
+                        ModItems.TIN_PICKAXE,
+                        ModItems.TIN_AXE,
+                        ModItems.TIN_SHOVEL,
+                        ModItems.TIN_HOE,
+                        ModItems.TIN_HELMET,
+                        ModItems.TIN_CHESTPLATE,
+                        ModItems.TIN_LEGGINGS,
+                        ModItems.TIN_BOOTS
+                ));
+
+                // Amethyst
+                List<ItemLike> amethystSmeltables = List.of(ModBlocks.AMETHYST_ORE);
+                oreSmelting(amethystSmeltables, RecipeCategory.MISC, CookingBookCategory.BLOCKS, ModItems.AMETHYST_GEM, 0.25f, 200, "amethyst");
+                oreBlasting(amethystSmeltables, RecipeCategory.MISC, CookingBookCategory.BLOCKS, ModItems.AMETHYST_GEM, 0.25f, 200, "amethyst");
+                nineBlockStorageRecipes(RecipeCategory.MISC, ModItems.AMETHYST_GEM, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLOCK_OF_AMETHYST);
+                ShapelessRecipeBuilder.shapeless(registries.lookupOrThrow(Registries.ITEM), RecipeCategory.MISC, ModItems.AMETHYST_GEM, 9)
+                        .requires(ModBlocks.BLOCK_OF_AMETHYST)
+                        .unlockedBy(getHasName(ModBlocks.BLOCK_OF_AMETHYST), has(ModBlocks.BLOCK_OF_AMETHYST))
+                        .save(output, "amethyst_gems_from_block");
+
+                addMaterialRecipes(new MaterialSet(
+                        ModItems.AMETHYST_GEM,
+                        ModItems.AMETHYST_SWORD,
+                        ModItems.AMETHYST_PICKAXE,
+                        ModItems.AMETHYST_AXE,
+                        ModItems.AMETHYST_SHOVEL,
+                        ModItems.AMETHYST_HOE,
+                        ModItems.AMETHYST_HELMET,
+                        ModItems.AMETHYST_CHESTPLATE,
+                        ModItems.AMETHYST_LEGGINGS,
+                        ModItems.AMETHYST_BOOTS
+                ));
+            }
+
+            private void addMaterialRecipes(MaterialSet material) {
+                var items = registries.lookupOrThrow(Registries.ITEM);
+
+                // Sword
+                ShapedRecipeBuilder.shaped(items, RecipeCategory.COMBAT, material.sword())
                         .pattern("T")
                         .pattern("T")
                         .pattern("S")
-                        .define('T', ModItems.TIN_INGOT)
+                        .define('T', material.ingredient())
                         .define('S', Items.STICK)
-                        .unlockedBy(getHasName(ModItems.TIN_INGOT), has(ModItems.TIN_INGOT))
+                        .unlockedBy(getHasName(material.ingredient()), has(material.ingredient()))
                         .save(output);
 
-                // Tin Pickaxe
-                shaped(RecipeCategory.TOOLS, ModItems.TIN_PICKAXE)
+                // Pickaxe
+                ShapedRecipeBuilder.shaped(items, RecipeCategory.TOOLS, material.pickaxe())
                         .pattern("TTT")
                         .pattern(" S ")
                         .pattern(" S ")
-                        .define('T', ModItems.TIN_INGOT)
+                        .define('T', material.ingredient())
                         .define('S', Items.STICK)
-                        .unlockedBy(getHasName(ModItems.TIN_INGOT), has(ModItems.TIN_INGOT))
+                        .unlockedBy(getHasName(material.ingredient()), has(material.ingredient()))
                         .save(output);
 
-                // Tin Axe
-                shaped(RecipeCategory.COMBAT, ModItems.TIN_AXE)
+                // Axe
+                ShapedRecipeBuilder.shaped(items, RecipeCategory.TOOLS, material.axe())
                         .pattern("TT")
                         .pattern("ST")
                         .pattern("S ")
-                        .define('T', ModItems.TIN_INGOT)
+                        .define('T', material.ingredient())
                         .define('S', Items.STICK)
-                        .unlockedBy(getHasName(ModItems.TIN_INGOT), has(ModItems.TIN_INGOT))
+                        .unlockedBy(getHasName(material.ingredient()), has(material.ingredient()))
                         .save(output);
 
-                // Tin Shovel
-                shaped(RecipeCategory.TOOLS, ModItems.TIN_SHOVEL)
+                // Shovel
+                ShapedRecipeBuilder.shaped(items, RecipeCategory.TOOLS, material.shovel())
                         .pattern("T")
                         .pattern("S")
                         .pattern("S")
-                        .define('T', ModItems.TIN_INGOT)
+                        .define('T', material.ingredient())
                         .define('S', Items.STICK)
-                        .unlockedBy(getHasName(ModItems.TIN_INGOT), has(ModItems.TIN_INGOT))
+                        .unlockedBy(getHasName(material.ingredient()), has(material.ingredient()))
                         .save(output);
 
-                // Tin Hoe
-                shaped(RecipeCategory.TOOLS, ModItems.TIN_HOE)
+                // Hoe
+                ShapedRecipeBuilder.shaped(items, RecipeCategory.TOOLS, material.hoe())
                         .pattern("TT")
                         .pattern("S ")
                         .pattern("S ")
-                        .define('T', ModItems.TIN_INGOT)
+                        .define('T', material.ingredient())
                         .define('S', Items.STICK)
-                        .unlockedBy(getHasName(ModItems.TIN_INGOT), has(ModItems.TIN_INGOT))
+                        .unlockedBy(getHasName(material.ingredient()), has(material.ingredient()))
                         .save(output);
 
-                // Tin Helmet
-                shaped(RecipeCategory.TOOLS, ModItems.TIN_HELMET)
+                // Helmet
+                ShapedRecipeBuilder.shaped(items, RecipeCategory.COMBAT, material.helmet())
                         .pattern("TTT")
                         .pattern("T T")
-                        .define('T', ModItems.TIN_INGOT)
-                        .unlockedBy(getHasName(ModItems.TIN_INGOT), has(ModItems.TIN_INGOT))
+                        .define('T', material.ingredient())
+                        .unlockedBy(getHasName(material.ingredient()), has(material.ingredient()))
                         .save(output);
 
-                // Tin Chestplate
-                shaped(RecipeCategory.TOOLS, ModItems.TIN_CHESTPLATE)
+                // Chestplate
+                ShapedRecipeBuilder.shaped(items, RecipeCategory.COMBAT, material.chestplate())
                         .pattern("T T")
                         .pattern("TTT")
                         .pattern("TTT")
-                        .define('T', ModItems.TIN_INGOT)
-                        .unlockedBy(getHasName(ModItems.TIN_INGOT), has(ModItems.TIN_INGOT))
+                        .define('T', material.ingredient())
+                        .unlockedBy(getHasName(material.ingredient()), has(material.ingredient()))
                         .save(output);
 
-                // Tin Leggings
-                shaped(RecipeCategory.TOOLS, ModItems.TIN_LEGGINGS)
+                // Leggings
+                ShapedRecipeBuilder.shaped(items, RecipeCategory.COMBAT, material.leggings())
                         .pattern("TTT")
                         .pattern("T T")
                         .pattern("T T")
-                        .define('T', ModItems.TIN_INGOT)
-                        .unlockedBy(getHasName(ModItems.TIN_INGOT), has(ModItems.TIN_INGOT))
+                        .define('T', material.ingredient())
+                        .unlockedBy(getHasName(material.ingredient()), has(material.ingredient()))
                         .save(output);
 
-                // Tin Boots
-                shaped(RecipeCategory.TOOLS, ModItems.TIN_BOOTS)
+                // Boots
+                ShapedRecipeBuilder.shaped(items, RecipeCategory.COMBAT, material.boots())
                         .pattern("T T")
                         .pattern("T T")
-                        .define('T', ModItems.TIN_INGOT)
-                        .unlockedBy(getHasName(ModItems.TIN_INGOT), has(ModItems.TIN_INGOT))
+                        .define('T', material.ingredient())
+                        .unlockedBy(getHasName(material.ingredient()), has(material.ingredient()))
                         .save(output);
             }
         };
     }
+
+    private record MaterialSet(
+            ItemLike ingredient,
+            ItemLike sword,
+            ItemLike pickaxe,
+            ItemLike axe,
+            ItemLike shovel,
+            ItemLike hoe,
+            ItemLike helmet,
+            ItemLike chestplate,
+            ItemLike leggings,
+            ItemLike boots
+    ) {}
 
     @Override
     public String getName() {

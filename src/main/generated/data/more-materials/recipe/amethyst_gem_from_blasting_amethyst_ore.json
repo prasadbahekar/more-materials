@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "blocks",
+  "cookingtime": 200,
+  "experience": 0.25,
+  "group": "amethyst",
+  "ingredient": "more-materials:amethyst_ore",
+  "result": {
+    "id": "more-materials:amethyst_gem"
+  }
+}
