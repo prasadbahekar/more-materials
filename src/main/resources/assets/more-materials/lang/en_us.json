@@ -6,6 +6,11 @@
   "item.more-materials.tin_shovel": "Tin Shovel",
   "item.more-materials.tin_hoe": "Tin Hoe",
 
+  "item.more-materials.tin_helmet": "Tin Hoe",
+  "item.more-materials.tin_chestplate": "Tin Chestplate",
+  "item.more-materials.tin_leggings": "Tin Leggings",
+  "item.more-materials.tin_boots": "Tin Boots",
+
   "block.more-materials.block_of_tin": "Block of Tin",
   "block.more-materials.tin_ore": "Tin Ore"
 }

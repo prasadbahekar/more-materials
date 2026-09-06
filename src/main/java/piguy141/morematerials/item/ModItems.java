@@ -8,8 +8,10 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.equipment.ArmorType;
 import net.minecraft.world.level.block.Block;
 import piguy141.morematerials.Main;
+import piguy141.morematerials.datagen.ModArmorMaterials;
 
 import java.util.function.Function;
 
@@ -22,6 +24,10 @@ public class ModItems {
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.COMBAT).register((creativeTab) -> {
             creativeTab.accept(TIN_SWORD);
             creativeTab.accept(TIN_AXE);
+            creativeTab.accept(TIN_HELMET);
+            creativeTab.accept(TIN_CHESTPLATE);
+            creativeTab.accept(TIN_LEGGINGS);
+            creativeTab.accept(TIN_BOOTS);
         });
 
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.TOOLS_AND_UTILITIES).register((creativeTab) -> {
@@ -49,4 +55,8 @@ public class ModItems {
     public static final Item TIN_AXE = registerItem("tin_axe", properties -> new Item(properties.axe(ModToolMaterials.TIN, 5f, -3.2f)));
     public static final Item TIN_SHOVEL = registerItem("tin_shovel", properties -> new Item(properties.shovel(ModToolMaterials.TIN, 2.5f, -3f)));
     public static final Item TIN_HOE = registerItem("tin_hoe", properties -> new Item(properties.hoe(ModToolMaterials.TIN, 1f, -3f)));
+    public static final Item TIN_HELMET = registerItem("tin_helmet", properties -> new Item(properties.humanoidArmor(ModArmorMaterials.TIN_ARMOR_MATERIAL, ArmorType.HELMET)));
+    public static final Item TIN_CHESTPLATE = registerItem("tin_chestplate", properties -> new Item(properties.humanoidArmor(ModArmorMaterials.TIN_ARMOR_MATERIAL, ArmorType.CHESTPLATE)));
+    public static final Item TIN_LEGGINGS = registerItem("tin_leggings", properties -> new Item(properties.humanoidArmor(ModArmorMaterials.TIN_ARMOR_MATERIAL, ArmorType.LEGGINGS)));
+    public static final Item TIN_BOOTS = registerItem("tin_boots", properties -> new Item(properties.humanoidArmor(ModArmorMaterials.TIN_ARMOR_MATERIAL, ArmorType.BOOTS)));
 }

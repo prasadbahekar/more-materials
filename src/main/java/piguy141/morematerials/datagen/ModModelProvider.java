@@ -27,5 +27,9 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerators.generateFlatItem(ModItems.TIN_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.TIN_SHOVEL, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.TIN_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateTrimmableItem(ModItems.TIN_HELMET, ModArmorMaterials.TIN_KEY, itemModelGenerators.TRIM_PREFIX_HELMET, false);
+        itemModelGenerators.generateTrimmableItem(ModItems.TIN_CHESTPLATE, ModArmorMaterials.TIN_KEY, itemModelGenerators.TRIM_PREFIX_CHESTPLATE, false);
+        itemModelGenerators.generateTrimmableItem(ModItems.TIN_LEGGINGS, ModArmorMaterials.TIN_KEY, itemModelGenerators.TRIM_PREFIX_LEGGINGS, false);
+        itemModelGenerators.generateTrimmableItem(ModItems.TIN_BOOTS, ModArmorMaterials.TIN_KEY, itemModelGenerators.TRIM_PREFIX_BOOTS, false);
     }
 }

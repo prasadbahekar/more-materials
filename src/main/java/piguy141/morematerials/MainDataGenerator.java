@@ -4,10 +4,7 @@ import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraft.core.RegistrySetBuilder;
 import net.minecraft.core.registries.Registries;
-import piguy141.morematerials.datagen.ModBlockLootTableProvider;
-import piguy141.morematerials.datagen.ModBlockTagsProvider;
-import piguy141.morematerials.datagen.ModModelProvider;
-import piguy141.morematerials.datagen.ModRecipeProvider;
+import piguy141.morematerials.datagen.*;
 import piguy141.morematerials.world.ModConfiguredFeatures;
 import piguy141.morematerials.world.ModPlacedFeatures;
 import piguy141.morematerials.world.ModWorldGenProvider;
@@ -22,6 +19,7 @@ public class MainDataGenerator implements DataGeneratorEntrypoint {
         pack.addProvider(ModRecipeProvider::new);
         pack.addProvider(ModBlockLootTableProvider::new);
         pack.addProvider(ModWorldGenProvider::new);
+        pack.addProvider(ModEquipmentAssetProvider::new);
     }
 
     @Override

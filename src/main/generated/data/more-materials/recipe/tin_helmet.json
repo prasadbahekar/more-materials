@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "T": "more-materials:tin_ingot"
+  },
+  "pattern": [
+    "TTT",
+    "T T"
+  ],
+  "result": {
+    "id": "more-materials:tin_helmet"
+  }
+}

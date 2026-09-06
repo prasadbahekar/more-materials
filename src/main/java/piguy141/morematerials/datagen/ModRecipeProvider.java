@@ -37,6 +37,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .unlockedBy("has_block_of_tin", has(ModBlocks.BLOCK_OF_TIN))
                         .save(output, "tin_ingots_from_block");
 
+                // Tin Sword
                 shaped(RecipeCategory.COMBAT, ModItems.TIN_SWORD)
                         .pattern("T")
                         .pattern("T")
@@ -46,6 +47,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .unlockedBy(getHasName(ModItems.TIN_INGOT), has(ModItems.TIN_INGOT))
                         .save(output);
 
+                // Tin Pickaxe
                 shaped(RecipeCategory.TOOLS, ModItems.TIN_PICKAXE)
                         .pattern("TTT")
                         .pattern(" S ")
@@ -55,6 +57,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .unlockedBy(getHasName(ModItems.TIN_INGOT), has(ModItems.TIN_INGOT))
                         .save(output);
 
+                // Tin Axe
                 shaped(RecipeCategory.COMBAT, ModItems.TIN_AXE)
                         .pattern("TT")
                         .pattern("ST")
@@ -64,6 +67,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .unlockedBy(getHasName(ModItems.TIN_INGOT), has(ModItems.TIN_INGOT))
                         .save(output);
 
+                // Tin Shovel
                 shaped(RecipeCategory.TOOLS, ModItems.TIN_SHOVEL)
                         .pattern("T")
                         .pattern("S")
@@ -73,12 +77,47 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .unlockedBy(getHasName(ModItems.TIN_INGOT), has(ModItems.TIN_INGOT))
                         .save(output);
 
+                // Tin Hoe
                 shaped(RecipeCategory.TOOLS, ModItems.TIN_HOE)
                         .pattern("TT")
                         .pattern("S ")
                         .pattern("S ")
                         .define('T', ModItems.TIN_INGOT)
                         .define('S', Items.STICK)
+                        .unlockedBy(getHasName(ModItems.TIN_INGOT), has(ModItems.TIN_INGOT))
+                        .save(output);
+
+                // Tin Helmet
+                shaped(RecipeCategory.TOOLS, ModItems.TIN_HELMET)
+                        .pattern("TTT")
+                        .pattern("T T")
+                        .define('T', ModItems.TIN_INGOT)
+                        .unlockedBy(getHasName(ModItems.TIN_INGOT), has(ModItems.TIN_INGOT))
+                        .save(output);
+
+                // Tin Chestplate
+                shaped(RecipeCategory.TOOLS, ModItems.TIN_CHESTPLATE)
+                        .pattern("T T")
+                        .pattern("TTT")
+                        .pattern("TTT")
+                        .define('T', ModItems.TIN_INGOT)
+                        .unlockedBy(getHasName(ModItems.TIN_INGOT), has(ModItems.TIN_INGOT))
+                        .save(output);
+
+                // Tin Leggings
+                shaped(RecipeCategory.TOOLS, ModItems.TIN_LEGGINGS)
+                        .pattern("TTT")
+                        .pattern("T T")
+                        .pattern("T T")
+                        .define('T', ModItems.TIN_INGOT)
+                        .unlockedBy(getHasName(ModItems.TIN_INGOT), has(ModItems.TIN_INGOT))
+                        .save(output);
+
+                // Tin Boots
+                shaped(RecipeCategory.TOOLS, ModItems.TIN_BOOTS)
+                        .pattern("T T")
+                        .pattern("T T")
+                        .define('T', ModItems.TIN_INGOT)
                         .unlockedBy(getHasName(ModItems.TIN_INGOT), has(ModItems.TIN_INGOT))
                         .save(output);
             }
