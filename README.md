@@ -11,6 +11,8 @@
 ### About
 This is my first ever Minecraft Mod made in Fabric. It adds three new ores with full tools and armor sets. The goal of ths mod is that it makes minecraft more fun by adding more options for their tools and keeping the new materials balanced.
 
+<img width="1366" height="768" alt="2026-11-17_16 18 35" src="https://github.com/user-attachments/assets/ebcba856-7175-43cf-a458-935295e45407" />
+
 ### Learned Concepts:
 - How to create an Item
 - How to create a Block
